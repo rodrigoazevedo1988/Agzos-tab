@@ -56,8 +56,8 @@ applications, system actions, tools and settings, all without touching the mouse
 ## Getting started
 
 ```bash
-git clone <your-fork-or-clone-url> agzos-tab
-cd agzos-tab
+git clone https://github.com/rodrigoazevedo1988/Agzos-tab.git
+cd Agzos-tab
 npm ci
 npm run dev        # launches Electron with Vite in development mode
 ```

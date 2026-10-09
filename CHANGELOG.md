@@ -117,9 +117,5 @@ See the "Known limitations" section of [`README.md`](README.md). In short: only 
 artifacts have actually been built and launched; installers are unsigned; Windows and Linux
 artifacts are configured but unverified in this environment; no file search; AI is contracts only.
 
-<!--
-Comparison links intentionally omitted: this repository has no configured remote yet.
-Once one exists, add:
-  [Unreleased]: <remote>/compare/v0.1.0...HEAD
-  [0.1.0]: <remote>/releases/tag/v0.1.0
--->
+[Unreleased]: https://github.com/rodrigoazevedo1988/Agzos-tab/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/rodrigoazevedo1988/Agzos-tab/releases/tag/v0.1.0
