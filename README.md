@@ -114,9 +114,12 @@ GitHub release.
 
 These are stated honestly rather than hidden:
 
-- **Verified builds:** only **macOS arm64** has been built, packaged and launched end-to-end in
-  this repository's development environment. The Windows and Linux pipelines are configured and
-  their YAML is syntax-validated, but **their artifacts have not been produced or tested here**.
+- **Packaging is verified on all three platforms by CI.** Runs on GitHub Actions have produced
+  `agzos-tab-windows-latest` (~147 MB), `agzos-tab-macos-latest` (~242 MB, matching the locally
+  built `.dmg` + `.zip`) and `agzos-tab-ubuntu-latest` (~307 MB), each with a `SHA256SUMS` file.
+- **Runtime behaviour has only been verified on macOS.** The packaged macOS app was launched here
+  and discovered 108 real applications. **The app has never been launched on Windows or Linux** —
+  CI only packages it there, so hotkey, tray and discovery behaviour on those systems is unproven.
 - **Installers are unsigned.** No code-signing certificates or notarization credentials are
   configured. macOS builds will show Gatekeeper warnings and are not notarized.
 - **Global hotkey** registration depends on the OS/desktop environment. If the combination is

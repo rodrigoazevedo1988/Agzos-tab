@@ -58,7 +58,10 @@ node scripts/generate-icons.mjs
 
 Produced: an NSIS installer named `<appName>-<version> Setup.exe`.
 
-- Built on a Windows runner by CI; **not verified in this repository's development environment**.
+- **Packaged successfully by CI** on `windows-latest`; artifact `agzos-tab-windows-latest` (~147 MB)
+  with a generated `SHA256SUMS`.
+- **Never launched on Windows.** Only packaging is verified — runtime behaviour (hotkey, tray,
+  Start Menu discovery) is not.
 - The installer is **unsigned**, so SmartScreen will warn until a certificate is configured.
 - **MSI is not configured.** `@electron-forge/maker-wix` is intentionally absent rather than
   half-configured.
@@ -83,7 +86,10 @@ Verified locally: `Agzos Tab-0.1.0-arm64.dmg` and
 
 Produced: `.AppImage`, `.deb`, `.rpm`.
 
-- Built on an Ubuntu runner by CI; **not verified in this repository's development environment**.
+- **Packaged successfully by CI** on `ubuntu-latest`; artifact `agzos-tab-ubuntu-latest` (~307 MB)
+  with a generated `SHA256SUMS`.
+- **Never launched on Linux.** Only packaging is verified — runtime behaviour (hotkey, tray,
+  `.desktop` discovery) is not.
 - The AppImage uses the community `@reforged/maker-appimage` package, because Electron Forge has no
   official AppImage maker. If it proves unreliable, remove that maker and keep `.deb`/`.rpm` rather
   than claiming AppImage support.
@@ -127,8 +133,10 @@ the SHAs cannot be verified offline in this environment.
 Permissions are least-privilege: `contents: read` globally, `contents: write` only on the publish
 job.
 
-No release has been published from this repository yet — the workflow is configured and its YAML is
-syntax-validated, but it has not been executed.
+The CI workflow has run successfully on `main`, producing packaged artifacts for all three
+platforms. **No tagged release has been published yet** — `release.yml` is configured and its YAML
+is syntax-validated, but it has not been triggered, so signing, notarization and release
+publication remain unproven.
 
 ## Common problems
 

@@ -113,9 +113,9 @@ application discovery and an extensible command registry.
 
 ### Known limitations
 
-See the "Known limitations" section of [`README.md`](README.md). In short: only macOS arm64
-artifacts have actually been built and launched; installers are unsigned; Windows and Linux
-artifacts are configured but unverified in this environment; no file search; AI is contracts only.
+See the "Known limitations" section of [`README.md`](README.md). In short: CI packages on all three
+platforms, but the app has only been **launched** on macOS; installers are unsigned; no file
+search; AI is contracts only.
 
 [Unreleased]: https://github.com/rodrigoazevedo1988/Agzos-tab/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/rodrigoazevedo1988/Agzos-tab/releases/tag/v0.1.0

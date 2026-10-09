@@ -69,7 +69,8 @@ Be explicit about the gaps:
 - **No real-OS integration tests.** Discovery is tested against fixtures, not against an actual
   `/Applications`, Start Menu or desktop database. Global shortcuts, the tray and native dialogs
   are exercised through fakes, not the OS.
-- **Windows and Linux behaviour is unverified.** Their CI jobs are configured but have never run.
+- **Windows and Linux behaviour is unverified.** CI _packages_ on those platforms successfully,
+  but never launches the app there, so their runtime behaviour is untested.
 - **No signed/notarized build tests.**
 - **No performance benchmark.** Startup time and memory were not measured; see
   [`ROADMAP.md`](ROADMAP.md).
